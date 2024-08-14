@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0"
     />
-    <title>Login Page</title>
+    <title>Register Page</title>
   </head>
 
   <body>
@@ -25,14 +25,36 @@
           /></a>
         </div>
         <div class="login-card-header">
-          <h1>Sign In</h1>
-          <div>Please login to use the platform</div>
+          <h1>Create Account</h1>
+          <div>Join the community and start learning!</div>
         </div>
         <form
           class="login-card-form"
-          action="your-login-endpoint"
+          action="your-registration-endpoint"
           method="POST"
         >
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">person</span>
+            <input
+              type="text"
+              placeholder="Enter Full Name"
+              id="fullNameForm"
+              name="fullname"
+              required
+            />
+          </div>
+          <!-- <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">person</span>
+            <span class="material-symbols-outlined"> person </span>
+            <input
+              type="text"
+              placeholder="Enter"
+              id="emailForm"
+              name="email"
+              required
+            />
+          </div> -->
+
           <div class="form-item">
             <span class="form-item-icon material-symbols-rounded">mail</span>
             <input
@@ -40,7 +62,6 @@
               placeholder="Enter Email"
               id="emailForm"
               name="email"
-              autofocus
               required
             />
           </div>
@@ -54,23 +75,33 @@
               required
             />
           </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">lock</span>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="confirmPasswordForm"
+              name="confirm_password"
+              required
+            />
+          </div>
           <div class="form-item-other">
             <div class="checkbox">
-              <input type="checkbox" id="rememberMeCheckbox" />
-              <label for="rememberMeCheckbox">Remember me</label>
+              <input type="checkbox" id="termsCheckbox" required />
+              <label for="termsCheckbox"
+                >I agree to the <a href="#">Terms and Conditions</a></label
+              >
             </div>
-            <a href="#" class="forgot-password">I forgot my password!</a>
           </div>
-          <button type="submit">Sign In</button>
+          <button type="submit">Register</button>
         </form>
 
         <div class="login-card-footer">
-          Don't have an account?
-          <a href="register.html">Create a free account.</a>
+          Already have an account? <a href="login.html">Sign In</a>
         </div>
       </div>
       <div class="login-card-social">
-        <div>Other Sign-In Options</div>
+        <div>Or Sign Up Using</div>
         <div class="login-card-social-btns">
           <a href="#">
             <svg

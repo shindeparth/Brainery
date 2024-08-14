@@ -3,7 +3,7 @@
 body {
   font-family: "proxima-nova", sans-serif;
   min-height: 100vh;
-  background-image: url("img/bg-1.png");
+  background-image: url(img/bg.png);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@ body {
 /* Login Card */
 .login-card {
   width: 500px;
-  background-color: rgba(251, 251, 251, 0.7);
+  background: rgba(255, 255, 255, 0.5);
   padding: 4rem;
   border-radius: 10px;
   position: relative;
@@ -81,28 +81,16 @@ body {
 
 .login-card-form .form-item .form-item-icon {
   position: absolute;
-  top: 50%;
-  left: 1rem;
+  top: 0.82rem;
+  left: 1.4rem;
   font-size: 1.3rem;
   opacity: 0.4;
-  transform: translateY(-50%);
 }
 
 .login-card-form .checkbox {
   display: flex;
   align-items: center;
   gap: 7px;
-}
-
-.checkbox input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: black;
-}
-
-.checkbox label {
-  font-size: 0.9rem;
-  color: #333;
 }
 
 .login-card-form .form-item-other {
@@ -135,6 +123,12 @@ body {
 
 .login-card input:focus {
   background: white;
+}
+
+.login-card input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: black;
 }
 
 .login-card button {
@@ -204,37 +198,9 @@ body {
     padding: 2rem;
   }
 }
-
-/* Centering Icons Vertically */
-.login-card-form .form-item-icon {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Adjusted Font Size and Spacing */
-.login-card input[type="email"],
-.login-card input[type="password"] {
-  padding-left: calc(1rem * 2.5);
-  font-size: 1rem;
-}
-
-.login-card .form-item-other {
-  font-size: 0.9rem;
-}
-
-/* Improved Button Hover Effect */
-.login-card button:hover {
-  background-color: #333;
-}
-
-/* Forgot Password Link Styling */
-.forgot-password {
-  color: #35339a;
-  text-decoration: none;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
+/* Header Font Size */
+.login-card-header h1 {
+  font-size: 2.5rem;
 }
 
 /* Header Font Size */
@@ -258,12 +224,6 @@ body {
 
 .login-card-form .checkbox label a:hover {
   text-decoration: none;
-}
-
-/* Slight padding adjustment for the new confirm password field */
-.login-card input[type="password"]#confirmPasswordForm {
-  padding-left: calc(1rem * 2.5);
-  font-size: 1rem;
 }
 
 /* Additional responsive adjustment for the checkbox label */
