@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <p>Your Google Sign-In was successful.</p>
+    <p id="token-info"></p>
+
+    <script>
+      // Retrieve the OAuth token from the URL parameters
+      function getParameterByName(name) {
+        const url = new URL(window.location.href);
+        const value = url.searchParams.get(name);
+        return value ? decodeURIComponent(value) : null;
+      }
+
+      // Get the ID token from the URL
+      const idToken = getParameterByName("id_token");
+
+      // Display the ID token or handle it as needed
+      if (idToken) {
+        document.getElementById(
+          "token-info"
+        ).textContent = `ID Token: ${idToken}`;
+        // You can also send this token to your server here
+      } else {
+        document.getElementById("token-info").textContent = "No token found.";
+      }
+    </script>
+  </body>
+</html>
