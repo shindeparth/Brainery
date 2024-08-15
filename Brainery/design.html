@@ -1,91 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design</title>
-    <link rel="stylesheet" href="https://use.typekit.net/agr6cpg.css">
-    <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Seminars</title>
+    <link rel="stylesheet" href="programs.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          draggable="false"
+          src="img/Brainery-black.png"
+          alt="Brainery logo"
+          class="logo"
+        />
+      </a>
+      <nav>
+        <ul class="nav-link">
+          <li><a href="#">About</a></li>
+          <li class="services">
+            <a href="#" class="dropdown-toggle">Programmes</a>
+            <span class="material-icons dropdown-icon">arrow_drop_down</span>
+            <ul class="drop-down">
+              <li><a href="design.html">Design</a></li>
+              <li><a href="management.html">Management</a></li>
+              <li><a href="productivity.html">Productivity</a></li>
+              <li><a href="marketing.html">Marketing</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </nav>
+      <button class="login-btn" onclick="location.href='login.html'">
+        Login
+      </button>
+    </header>
     <div class="container">
-        <header>
-            <a href="index.html"><img draggable="false" src="img/Brainery-black.png" alt="Brainery logo"
-                    class="logo"></a>
-            <nav>
-                <ul class="nav-link">
-                    <li><a href="#">About</a></li>
-                    <li class="services">
-                        <a href="#" class="dropdown-toggle">Programmes</a>
-                        <span class="material-icons dropdown-icon">arrow_drop_down</span>
-                        <ul class="drop-down">
-                            <li><a href="design.html">Design</a></li>
-                            <li><a href="management.html">Management</a></li>
-                            <li><a href="productivity.html">Productivity</a></li>
-                            <li><a href="marketing.html">Marketing</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Resources</a></li>
-                </ul>
-            </nav>
-           <button class="login-btn" onclick="location.href='login.html'">
-          Login
-        </button>
-        </header>
+      <main>
+        <h1>Design Seminars & Courses</h1>
+        <p>
+          We are a community-driven platform dedicated to helping creatives grow
+          and excel. Our interactive seminars, training sessions, and workshops
+          are designed for artists, designers, writers, and innovators. Join us
+          online to connect with industry experts and like-minded individuals
+          from around the globe.
+        </p>
 
-        <body>
-            hellow
+        <!-- Grid Container -->
+        <div class="courses-grid">
+          <!-- Course 1 -->
+          <div class="dialog-trigger" id="open-dialog1">
+            <img
+              src="seminar1.jpg"
+              alt="Design Seminar 1"
+              class="dialog-image"
+            />
+            <div class="dialog-info">
+              <h2 class="dialog-title">Design Thinking Workshop</h2>
+              <p class="dialog-subtitle">John Doe</p>
+              <button class="dialog-button" aria-label="Open dialog">+</button>
+            </div>
+          </div>
 
-            <footer>
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <a href="index.html"><img draggable="false" src="img/Brainery-white.png" alt="Brainery logo"
-                                class="logo"></a>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Programs</h3>
-                        <ul>
-                            <li><a href="#">Seminars</a></li>
-                            <li><a href="#">Workshops</a></li>
-                            <li><a href="#">Mentorship</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Resources</h3>
-                        <ul>
-                            <li><a href="#">Community Forums</a></li>
-                            <li><a href="#">Guides & References</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Company</h3>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Work With Us</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Get in Touch</h3>
-                        <ul class="socials">
-                            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img
-                                        src="img/instagram.png" alt="Instagram" class="social-icon"></a></li>
-                            <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"><img
-                                        src="img/twitter.png" alt="Twitter" class="social-icon"></a></li>
-                            <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><img
-                                        src="img/linkedin.png" alt="LinkedIn" class="social-icon"></a></li>
-                        </ul>
+          <!-- Dialog Container 1 -->
+          <div class="dialog-container" id="dialog-container1">
+            <div class="dialog-content">
+              <img
+                src="seminar1.jpg"
+                alt="Design Seminar 1"
+                class="dialog-image"
+              />
+              <div class="dialog-text">
+                <h2 class="dialog-title">Design Thinking Workshop</h2>
+                <p class="dialog-subtitle">John Doe</p>
+                <p class="dialog-description">
+                  This workshop covers the principles of design thinking and how
+                  to apply them to real-world problems. Join us for an
+                  interactive session with hands-on activities.
+                </p>
+                <p class="dialog-description">
+                  Date: September 15, 2024<br />
+                  Location: Online
+                </p>
+                <a
+                  href="https://www.example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="dialog-link"
+                  >Learn More</a
+                >
+              </div>
+              <button class="dialog-close" id="close-dialog1">&times;</button>
+            </div>
+          </div>
 
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Brainery. All rights reserved.</p>
-                </div>
-            </footer>
-        </body>
+          <!-- Additional Courses -->
+          <div class="dialog-trigger" id="open-dialog2">
+            <img
+              src="seminar2.jpg"
+              alt="Design Seminar 2"
+              class="dialog-image"
+            />
+            <div class="dialog-info">
+              <h2 class="dialog-title">Advanced UI/UX Design</h2>
+              <p class="dialog-subtitle">Jane Smith</p>
+              <button class="dialog-button" aria-label="Open dialog">+</button>
+            </div>
+          </div>
 
+          <div class="dialog-container" id="dialog-container2">
+            <div class="dialog-content">
+              <img
+                src="seminar2.jpg"
+                alt="Design Seminar 2"
+                class="dialog-image"
+              />
+              <div class="dialog-text">
+                <h2 class="dialog-title">Advanced UI/UX Design</h2>
+                <p class="dialog-subtitle">Jane Smith</p>
+                <p class="dialog-description">
+                  Explore advanced techniques in UI/UX design, including
+                  prototyping and user testing. This course is ideal for
+                  experienced designers looking to deepen their skills.
+                </p>
+                <p class="dialog-description">
+                  Date: October 10, 2024<br />
+                  Location: Online
+                </p>
+                <a
+                  href="https://www.example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="dialog-link"
+                  >Learn More</a
+                >
+              </div>
+              <button class="dialog-close" id="close-dialog2">&times;</button>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="dialog-trigger" id="open-dialog3">
+            <img
+              src="seminar3.jpg"
+              alt="Design Seminar 3"
+              class="dialog-image"
+            />
+            <div class="dialog-info">
+              <h2 class="dialog-title">Creative Design Techniques</h2>
+              <p class="dialog-subtitle">Emily Johnson</p>
+              <button class="dialog-button" aria-label="Open dialog">+</button>
+            </div>
+          </div>
+
+          <!-- Dialog Container 3 -->
+          <div class="dialog-container" id="dialog-container3">
+            <div class="dialog-content">
+              <img
+                src="seminar3.jpg"
+                alt="Design Seminar 3"
+                class="dialog-image"
+              />
+              <div class="dialog-text">
+                <h2 class="dialog-title">Creative Design Techniques</h2>
+                <p class="dialog-subtitle">Emily Johnson</p>
+                <p class="dialog-description">
+                  Dive into innovative design techniques and learn how to apply
+                  them to various projects. This seminar offers practical tips
+                  and creative exercises.
+                </p>
+                <p class="dialog-description">
+                  Date: November 5, 2024<br />
+                  Location: Online
+                </p>
+                <a
+                  href="https://www.example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="dialog-link"
+                  >Learn More</a
+                >
+              </div>
+              <button class="dialog-close" id="close-dialog3">&times;</button>
+            </div>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="dialog-trigger" id="open-dialog4">
+            <img
+              src="seminar4.jpg"
+              alt="Design Seminar 4"
+              class="dialog-image"
+            />
+            <div class="dialog-info">
+              <h2 class="dialog-title">Design for Social Impact</h2>
+              <p class="dialog-subtitle">Michael Brown</p>
+              <button class="dialog-button" aria-label="Open dialog">+</button>
+            </div>
+          </div>
+
+          <!-- Dialog Container 4 -->
+          <div class="dialog-container" id="dialog-container4">
+            <div class="dialog-content">
+              <img
+                src="seminar4.jpg"
+                alt="Design Seminar 4"
+                class="dialog-image"
+              />
+              <div class="dialog-text">
+                <h2 class="dialog-title">Design for Social Impact</h2>
+                <p class="dialog-subtitle">Michael Brown</p>
+                <p class="dialog-description">
+                  Learn how to use design principles to drive social change and
+                  make a positive impact. This seminar focuses on projects with
+                  meaningful outcomes.
+                </p>
+                <p class="dialog-description">
+                  Date: December 1, 2024<br />
+                  Location: Online
+                </p>
+                <a
+                  href="https://www.example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="dialog-link"
+                  >Learn More</a
+                >
+              </div>
+              <button class="dialog-close" id="close-dialog4">&times;</button>
+            </div>
+          </div>
+
+          <!-- Course 5 -->
+          <div class="dialog-trigger" id="open-dialog5">
+            <img
+              src="seminar5.jpg"
+              alt="Design Seminar 5"
+              class="dialog-image"
+            />
+            <div class="dialog-info">
+              <h2 class="dialog-title">User-Centered Design</h2>
+              <p class="dialog-subtitle">Sarah Davis</p>
+              <button class="dialog-button" aria-label="Open dialog">+</button>
+            </div>
+          </div>
+
+          <!-- Dialog Container 5 -->
+          <div class="dialog-container" id="dialog-container5">
+            <div class="dialog-content">
+              <img
+                src="seminar5.jpg"
+                alt="Design Seminar 5"
+                class="dialog-image"
+              />
+              <div class="dialog-text">
+                <h2 class="dialog-title">User-Centered Design</h2>
+                <p class="dialog-subtitle">Sarah Davis</p>
+                <p class="dialog-description">
+                  Discover the fundamentals of user-centered design and how to
+                  create intuitive and effective user experiences.
+                </p>
+                <p class="dialog-description">
+                  Date: January 20, 2025<br />
+                  Location: Online
+                </p>
+                <a
+                  href="https://www.example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="dialog-link"
+                  >Learn More</a
+                >
+              </div>
+              <button class="dialog-close" id="close-dialog5">&times;</button>
+            </div>
+          </div>
+
+          <!-- Course 6 -->
+          <div class="dialog-trigger" id="open-dialog6">
+            <img
+              src="seminar6.jpg"
+              alt="Design Seminar 6"
+              class="dialog-image"
+            />
+            <div class="dialog-info">
+              <h2 class="dialog-title">Graphic Design Fundamentals</h2>
+              <p class="dialog-subtitle">Laura Wilson</p>
+              <button class="dialog-button" aria-label="Open dialog">+</button>
+            </div>
+          </div>
+
+          <!-- Dialog Container 6 -->
+          <div class="dialog-container" id="dialog-container6">
+            <div class="dialog-content">
+              <img
+                src="seminar6.jpg"
+                alt="Design Seminar 6"
+                class="dialog-image"
+              />
+              <div class="dialog-text">
+                <h2 class="dialog-title">Graphic Design Fundamentals</h2>
+                <p class="dialog-subtitle">Laura Wilson</p>
+                <p class="dialog-description">
+                  A comprehensive course covering the basics of graphic design,
+                  including typography, color theory, and layout principles.
+                </p>
+                <p class="dialog-description">
+                  Date: February 15, 2025<br />
+                  Location: Online
+                </p>
+                <a
+                  href="https://www.example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="dialog-link"
+                  >Learn More</a
+                >
+              </div>
+              <button class="dialog-close" id="close-dialog6">&times;</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
