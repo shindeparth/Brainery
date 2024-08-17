@@ -259,7 +259,7 @@ footer {
 /* SLIDER STYLES */
 .slider {
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: var(--height);
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
@@ -332,6 +332,7 @@ footer {
   margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 0px;
+  /* height: 100vh; */
 }
 
 .subHeroIMG {
@@ -399,6 +400,8 @@ footer {
   /* background: #fbf89f; */
   padding-bottom: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .last-hero-text {
@@ -406,6 +409,7 @@ footer {
   font-weight: 700;
   line-height: 1.9;
   display: inline-block;
+  margin-bottom: 30px;
 }
 
 .last-hero-text img {
@@ -426,48 +430,18 @@ footer {
   display: inline-block;
 }
 
-.cta-email {
-  margin-top: 20px;
-}
-
-.cta-email input[type="email"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 250px;
-  margin-right: 10px;
-}
-
-.cta-email .cta-button {
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.cta-email .cta-button:hover {
-  background-color: #333;
-}
-
 .last-hero {
   text-align: center;
   padding: 40px 20px;
   border-radius: 10px;
 
-  margin-top: 50px;
-}
-
-.last-hero-text {
-  margin-bottom: 30px;
+  margin-top: 90px;
 }
 
 .cta-email {
   margin-top: 20px;
   display: inline-block;
+  margin-bottom: 150px;
 }
 
 .cta-email input[type="email"] {
@@ -494,7 +468,7 @@ footer {
   border-radius: 20px;
   font-size: 18px;
   cursor: pointer;
-  margin-left: -100px;
+  margin-left: -95px;
   box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
   transition: background-color 0.3s, box-shadow 0.3s;
 }

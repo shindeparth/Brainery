@@ -7,42 +7,51 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const dialogContainer = dialogContainers[index];
       dialogContainer.style.display = "flex";
-      dialogContainer.classList.remove("fade-out");
-      dialogContainer.classList.add("fade-in");
-      dialogContainer
-        .querySelector(".dialog-content")
-        .classList.remove("zoom-out");
-      dialogContainer.querySelector(".dialog-content").classList.add("zoom-in");
+      gsap.fromTo(
+        dialogContainer,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, ease: "power2.out" }
+      );
+      gsap.fromTo(
+        dialogContainer.querySelector(".dialog-content"),
+        { scale: 0.8 },
+        { scale: 1, duration: 0.5, ease: "elastic.out(1, 0.5)" }
+      );
     });
   });
 
   closeDialogBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const dialogContainer = btn.closest(".dialog-container");
-      dialogContainer.classList.remove("fade-in");
-      dialogContainer.classList.add("fade-out");
-      dialogContainer
-        .querySelector(".dialog-content")
-        .classList.remove("zoom-in");
-      dialogContainer
-        .querySelector(".dialog-content")
-        .classList.add("zoom-out");
-      setTimeout(() => {
-        dialogContainer.style.display = "none";
-      }, 300); // Match animation duration
+      gsap.to(dialogContainer, {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.in",
+        onComplete: () => (dialogContainer.style.display = "none"),
+      });
+      gsap.to(dialogContainer.querySelector(".dialog-content"), {
+        scale: 0.8,
+        duration: 0.5,
+        ease: "power2.in",
+      });
     });
   });
 
   // Close the dialog if clicked outside of it
   window.addEventListener("click", (event) => {
     if (event.target.classList.contains("dialog-container")) {
-      event.target.classList.remove("fade-in");
-      event.target.classList.add("fade-out");
-      event.target.querySelector(".dialog-content").classList.remove("zoom-in");
-      event.target.querySelector(".dialog-content").classList.add("zoom-out");
-      setTimeout(() => {
-        event.target.style.display = "none";
-      }, 300); // Match animation duration
+      const dialogContainer = event.target;
+      gsap.to(dialogContainer, {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.in",
+        onComplete: () => (dialogContainer.style.display = "none"),
+      });
+      gsap.to(dialogContainer.querySelector(".dialog-content"), {
+        scale: 0.8,
+        duration: 0.5,
+        ease: "power2.in",
+      });
     }
   });
 });

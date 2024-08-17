@@ -317,7 +317,7 @@ nav {
   display: block;
   margin-top: 8px;
   color: #007bff;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -327,9 +327,9 @@ nav {
 
 .dialog-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 1.5rem;
+  top: 3px;
+  right: 7px;
+  font-size: 1.7rem;
   background: transparent;
   border: none;
   cursor: pointer;
