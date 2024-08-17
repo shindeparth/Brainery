@@ -157,7 +157,7 @@ nav {
 /* Grid Layout for Courses */
 .courses-grid {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   margin-top: 100px;
 }
@@ -165,23 +165,23 @@ nav {
 .group1 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 .group2 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   margin-top: 40px;
 }
 .group3 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 .group4 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   margin-top: 40px;
 }
 
