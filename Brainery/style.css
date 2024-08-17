@@ -538,3 +538,7 @@ footer {
   cursor: pointer;
   font-size: 24px;
 }
+
+.img-404 {
+  background-image: url(img/404.png);
+}
