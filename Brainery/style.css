@@ -32,6 +32,10 @@ body {
   text-align: center;
 }
 
+.smooth-scroll {
+  will-change: transform;
+}
+
 /* HEADER STYLES */
 header {
   background-color: #fbf89f;
@@ -55,7 +59,7 @@ header a {
 }
 
 .login-btn {
-  background-color: #fbf89f;
+  background-color: transparent;
   border: 1px solid #000;
   padding: 10px 30px;
   cursor: pointer;
@@ -281,7 +285,7 @@ footer {
   animation: autoRun 10s linear infinite;
   transition: filter 0.5s;
   animation-delay: calc(
-    (10s / var(--quantity)) * (var(--position) - 1)
+    (10s / var(--quantity)) * (var(--position) - 1) - var(--quantity) * 1s
   ) !important;
 }
 
@@ -332,7 +336,6 @@ footer {
   margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 0px;
-  /* height: 100vh; */
 }
 
 .subHeroIMG {
@@ -369,7 +372,7 @@ footer {
 
 .big-text {
   font-size: 52px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 200px;
   margin-bottom: 200px;
 }
@@ -386,7 +389,23 @@ footer {
   line-height: 1.6;
   margin-bottom: 10px;
 }
+#highlight-1 {
+  position: absolute;
+  top: 1520px;
+  left: 930px;
+  z-index: -1;
+  height: 120px;
+  width: 300px;
+}
 
+#highlight-2 {
+  position: absolute;
+  top: 2425px;
+  left: 550px;
+  z-index: -1;
+  height: 165px;
+  width: 600px;
+}
 /* Ensure slider is placed below the text */
 .slider {
   width: 100%;
