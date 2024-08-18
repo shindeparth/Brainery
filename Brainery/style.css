@@ -375,6 +375,8 @@ footer {
   font-weight: 600;
   margin-top: 200px;
   margin-bottom: 200px;
+  text-align: center;
+  width: 100vw;
 }
 
 /* SUBHERO page-2 */
