@@ -36,4 +36,6 @@ The purpose of this project is to create a comprehensive and engaging platform w
 ## Conclusion
 
 This project is a stepping stone in my journey to becoming proficient in web development. Brainery is not just a platform for creatives but also a testament to my growth as a developer.
+---
+[![Netlify Status](https://api.netlify.com/api/v1/badges/09122d30-ab62-4941-8f1d-753489d271c7/deploy-status)](https://app.netlify.com/sites/brainery-app/deploys)
 
