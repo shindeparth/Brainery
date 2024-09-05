@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -536,4 +536,115 @@ footer {
 
 .img-404 {
   background-image: url(img/404.png);
+}
+
+/* responsive site */
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  header .logo {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero-text {
+    font-size: 44px;
+  }
+
+  .hero p,
+  .register-btn {
+    font-size: 18px;
+  }
+
+  .register-btn {
+    padding: 10px 40px;
+  }
+
+  .subHero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .subHeroIMG img {
+    width: 80%;
+    margin: 0;
+  }
+
+  .subHeroText h2 {
+    font-size: 36px;
+  }
+
+  .subHeroText p {
+    font-size: 18px;
+  }
+
+  .slider .list .item img {
+    width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .cta-email input[type="email"],
+  .cta-email .cta-button {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .cta-email .cta-button {
+    margin-left: 0;
+  }
+}
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  header {
+    font-size: 20px;
+  }
+
+  .hero-text {
+    font-size: 52px;
+  }
+
+  .subHero {
+    flex-direction: column;
+  }
+
+  .subHeroIMG img {
+    margin: 0;
+  }
+
+  .subHeroText {
+    margin: 0;
+  }
+
+  .slider .list .item img {
+    width: 80%;
+  }
+
+  .cta-email input[type="email"],
+  .cta-email .cta-button {
+    width: 80%;
+    margin-bottom: 10px;
+  }
 }
