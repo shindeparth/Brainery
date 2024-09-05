@@ -1,10 +1,10 @@
 // Smooth scrolling with Locomotive Scroll
-// if (window.location.pathname === "/index.html") {
-//   const scroll = new LocomotiveScroll({
-//     el: document.querySelector(".smooth-scroll"),
-//     smooth: true,
-//   });
-// }
+if (window.location.pathname === "/index.html") {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector(".smooth-scroll"),
+    smooth: true,
+  });
+}
 document.addEventListener("DOMContentLoaded", () => {
   // Dialogs handling
   const openDialogBtns = document.querySelectorAll(".dialog-trigger");
