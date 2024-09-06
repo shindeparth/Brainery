@@ -1,12 +1,24 @@
-// Smooth scrolling with Locomotive Scroll
+// Smooth scrolling with Locomotive Scroll (for index.html only)
+if (
+  window.location.pathname === "/index.html" ||
+  window.location.pathname === "/"
+) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector(".smooth-scroll"),
+      smooth: true,
+      lerp: 0.05, // Smoothness level for scrolling
+    });
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector(".smooth-scroll"),
-  smooth: true,
-});
+    // Update Locomotive Scroll on window resize
+    window.addEventListener("resize", () => {
+      scroll.update();
+    });
+  });
+}
 
+// Dialog handling
 document.addEventListener("DOMContentLoaded", () => {
-  // Dialogs handling
   const openDialogBtns = document.querySelectorAll(".dialog-trigger");
   const closeDialogBtns = document.querySelectorAll(".dialog-close");
 
@@ -64,22 +76,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-function formalert() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert("Thank you for your submission"))
-      .catch((error) => alert(error));
-  };
-
-  document.querySelector("form").addEventListener("submit", handleSubmit);
-}
